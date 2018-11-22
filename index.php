@@ -34,7 +34,7 @@
 				<img src="hinh_anh/icon.png" height="50" style="position: absolute; top: 3px; left: 96px;">
 			    <a href="index.php">Trang chủ</a>
 			    <a href="?thamso=about">Giới thiệu</a>
-			    <a href="?thamso=all_product">Sản phẩm</a>
+			    <a href="?thamso=all_product">Món ăn</a>
 			    <a href="?thamso=guide">Hướng dẫn mua hàng</a>
 			    <a href="?thamso=contact">Liên hệ</a>
 			</div>

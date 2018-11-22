@@ -1,9 +1,9 @@
 <div class="title">
-	<span>Tất cả sản phẩm</span> 
+	<span>Tất cả món ăn</span> 
 </div>
 <?php 
 	include("ket_noi.php");	
-	$so_du_lieu=16;
+	$so_du_lieu=15;
 	$tv="select count(*) from san_pham";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);

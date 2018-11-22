@@ -13,7 +13,7 @@
 	}
 ?>
 
-Số sản phẩm : <?php echo $so_luong; ?>
+Số lượng món trong giỏ : <?php echo $so_luong; ?>
 <br><br>
 <input type="button" class="btn btn-info" onclick="window.location.href='?thamso=gio_hang'" value="Đặt hàng" style="margin: 0 87px; " />
 

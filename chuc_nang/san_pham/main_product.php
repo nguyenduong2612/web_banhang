@@ -1,9 +1,9 @@
 <div class="title">
-	<span>Sản phẩm của chúng tôi</span> 
+	<span>Món ăn của chúng tôi</span> 
 </div>
 <?php 
 	include("ket_noi.php");	
-	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit 0,16";
+	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit 0,15";
 	$tv_1=mysqli_query($conn,$tv);
 	while($tv_2=mysqli_fetch_array($tv_1))
 	{
@@ -18,7 +18,7 @@
 						$gia=$tv_2['gia'];
 						$gia=number_format($gia,0,",",".");
 						echo "<a href='$link_chi_tiet' >";
-							echo "<img src='$link_anh' width='150px' >";
+							echo "<img src='$link_anh'>";
 						echo "</a>";
 						echo "<br>";
 						echo "<br>";

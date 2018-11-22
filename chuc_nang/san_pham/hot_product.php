@@ -1,5 +1,5 @@
 <div class="sidetitle">
-	<span>Sản phẩm nổi bật</span>
+	<span>Món ăn nổi bật</span>
 </div>
 <center>
 	<?php 

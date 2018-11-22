@@ -23,7 +23,7 @@
 		$tv="select count(*) from san_pham  where $chuoi_tim_sql_2";
 		$tv_1=mysqli_query($conn,$tv);
 		$tv_2=mysqli_fetch_array($tv_1);
-		echo "<span style='display: block;width: 100%;padding: 25px 0;font-size:25px;'>Tìm thấy ".$tv_2[0]." sản phẩm</span>";
+		echo "<span style='display: block;width: 100%;padding: 25px 0;font-size:25px;'>Tìm thấy ".$tv_2[0]." món ăn phù hợp với '".$_GET['tu_khoa']."'</span>";
 		$so_trang=ceil($tv_2[0]/$so_du_lieu);
 		
 		if(!isset($_GET['trang'])){$vtbd=0;}else{$vtbd=($_GET['trang']-1)*$so_du_lieu;}

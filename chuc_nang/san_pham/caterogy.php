@@ -1,16 +1,20 @@
-<div class="title">
-	<span>Sản phẩm <?php echo $_GET['id']; ?> </span> 
-</div>
 <?php 
 	include("ket_noi.php");	
 	$id=$_GET['id'];
 	
-	$so_du_lieu=16;
+	$so_du_lieu=15;
 	$tv="select count(*) from san_pham where thuoc_menu='$id';";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
+	$query_name = mysqli_query($conn,"select * from menu_doc where id='$id';");
+	$get_name = mysqli_fetch_array($query_name);
 	$so_trang=ceil($tv_2[0]/$so_du_lieu);
+?>
+<div class="title">
+	<span><?php echo $get_name['ten']; ?> </span> 
+</div>
 	
+<?php
 	if(!isset($_GET['page'])){$vtbd=0;}else{$vtbd=($_GET['page']-1)*$so_du_lieu;}
 	
 	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where thuoc_menu='$id' order by id desc limit $vtbd,$so_du_lieu";

@@ -50,7 +50,7 @@
 	echo "<div class='title'><span>Giỏ hàng</span></div>";
 	if($gio_hang=="khong")
 	{
-		echo "Không có sản phẩm trong giỏ hàng";
+		echo "Không có món ăn trong giỏ hàng";
 	}
 	else 
 	{

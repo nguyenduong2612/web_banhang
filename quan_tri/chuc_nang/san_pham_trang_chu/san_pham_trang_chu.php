@@ -3,7 +3,7 @@
 ?>
 
 <?php 
-	include("ket_noi.php");	
+	include("../ket_noi.php");	
 	$so_dong_tren_mot_trang=10;
 	if(!isset($_GET['trang'])){$_GET['trang']=1;}	
 

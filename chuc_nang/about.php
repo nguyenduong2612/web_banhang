@@ -1,4 +1,4 @@
 <div class="title">
 	<span>Về chúng tôi</span>
 </div>
-<span>Dương Hải Nguyên 1234</span>
+<span class="about">Food lover - Gọi tại nhà ăn thả ga</span>

@@ -1,5 +1,5 @@
 <div class="sidetitle">
-	<span>Sản phẩm mới</span>
+	<span>Món ăn mới</span>
 </div>
 
 <center>
