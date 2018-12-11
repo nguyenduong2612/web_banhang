@@ -40,7 +40,7 @@
   			<input type="text" name='noi_dung' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 		</div>
 		
-		<button type="submit" class="btn btn-info">Mua hàng</button>
+		<button type="submit" class="btn btn-warning">Mua hàng</button>
 
 	 </div>	 
 </form>

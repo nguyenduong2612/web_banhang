@@ -24,49 +24,52 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body style="font-family: 'Quicksand', sans-serif; width: auto; position: relative;">
-		<div class="main" style="width: 100%;">
-
-			<div class="header">
-				
-			</div>
-
-			<div class="nav-bar">
-				<img src="hinh_anh/icon.png" height="50" style="position: absolute; top: 3px; left: 96px;">
-			    <a href="index.php">Trang chủ</a>
-			    <a href="?thamso=about">Giới thiệu</a>
-			    <a href="?thamso=all_product">Món ăn</a>
-			    <a href="?thamso=guide">Hướng dẫn mua hàng</a>
-			    <a href="?thamso=contact">Liên hệ</a>
-			</div>
-
-			<div class="content">
-				<div class="left-container">
-					<?php 
-						include("chuc_nang/menu_doc/menu_doc.php");
-						include("chuc_nang/san_pham/new_product.php"); 
-						include("chuc_nang/quang_cao/left_ads.php"); 
-					?>					
-				</div>
-				<div class="main-container">
-					<?php 
-						include("chuc_nang/navigation.php");
-					?>
-				</div>
-				<div class="right-container">
-					<?php 
-						include("chuc_nang/tim_kiem/vung_tim_kiem.php");
-						include("chuc_nang/gio_hang/vung_gio_hang.php"); 
-						include("chuc_nang/san_pham/hot_product.php"); 
-						include("chuc_nang/quang_cao/right_ads.php"); 
-					?>					
-				</div>
-			</div>
-
-			<div class="footer">
-				<?php include("chuc_nang/footer/footer.php"); ?>
-			</div>
-
+		<div class="header">
+			<?php 
+				include("chuc_nang/tim_kiem/vung_tim_kiem.php");
+			?>
 		</div>
+		<div class="nav-bar">
+		    <a href="index.php">Trang chủ</a>
+		    <a href="?thamso=about">Giới thiệu</a>
+		    <div class="caterogy" style="height: 50px;">
+		    	<a href="javascript:;">Danh mục</a>
+		    	<div class="caterogy_wrapper">
+		    	<?php 
+		    		include("chuc_nang/menu_doc/menu_doc.php");
+		    	?> 
+		    	</div>
+		    </div>
+		    <a href="?thamso=guide">Hướng dẫn mua hàng</a>
+		    <a href="?thamso=contact">Liên hệ</a>
+		    <div class="cart" style="height: 50px;">
+		    	<a href="javascript:;">Giỏ hàng</a>
+		    	<div class="cart_wrapper">
+		    	<?php 
+		    		include("chuc_nang/gio_hang/vung_gio_hang.php");
+		    	?> 
+		    	</div>
+			</div>   
+		</div>
+
+		<div class="main-container">
+			<?php 
+				include("chuc_nang/navigation.php");
+			?>
+		</div>
+		<!-- <div class="main-container">
+			<?php 
+				/*
+				
+				
+				include("chuc_nang/quang_cao/right_ads.php"); */
+			?>					
+		</div> -->
+
+		<div class="footer">
+			<?php include("chuc_nang/footer/footer.php"); ?>
+		</div>
+
 		
 	</body>
 </html>

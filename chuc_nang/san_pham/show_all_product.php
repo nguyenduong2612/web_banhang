@@ -1,6 +1,7 @@
 <div class="title">
 	<span>Tất cả món ăn</span> 
 </div>
+<div class="product_container">
 <?php 
 	include("ket_noi.php");	
 	$so_du_lieu=15;
@@ -24,18 +25,14 @@
 						$gia=$tv_2['gia'];
 						$gia=number_format($gia,0,",",".");
 						echo "<a href='$link_chi_tiet' >";
-							echo "<img src='$link_anh' width='150px' >";
+							echo "<img src='$link_anh'>";
 						echo "</a>";
-						echo "<br>";
-						echo "<br>";
-						echo "<a href='$link_chi_tiet' >";
+						echo "<a class='product_name' href='$link_chi_tiet' >";
 							echo $tv_2['ten'];
 						echo "</a>";
-						echo "<div style='margin-top:5px' >";						
+						echo "<span class='price'>";						
 						echo $gia;
-						echo "</div>";
-						echo "<br>";
-						
+						echo "</span>";							
 					echo "</div>";
 				}
 				if($i!=3)
@@ -54,3 +51,4 @@
 		}
 	echo "</div>";
 ?>
+</div>

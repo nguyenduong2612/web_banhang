@@ -16,37 +16,30 @@
 	<span> > </span>
 	<span><?php echo $tv_2['ten']; ?></span>
 </div>
-<?php
-	echo "<table>";
-		echo "<tr>";
-			echo "<td width='250px' align='center' >";
-				echo "<img src='$link_anh' width='200px' style='float: left;'>";
-			echo "</td>";
-			echo "<td valign='top' >";
-				echo "<a href='#'>";
-					echo $tv_2['ten'];
-				echo "</a>";
-				echo "<br>";
-				echo "<br>";
+
+<table>
+	<tr>
+		<td width='250px' align='center' >
+			<?php echo "<img src='$link_anh' width='200px' style='float: left;> "?>
+		</td>
+		<td valign='top' >
+			<a href='#'><?php echo $tv_2['ten']; ?></a>
+			<?php
 				$gia=$tv_2['gia'];
 				$gia=number_format($gia,0,",",".");
 				echo $gia;
-				echo "<br>";
-				echo "<br>";
-				echo "<form>";
-					echo "<input type='hidden' name='thamso' value='gio_hang' > ";
-					echo "<input type='hidden' name='id' value='".$_GET['id']."' > ";
-					echo "<input type='text'  class='form-control' name='so_luong' value='1' style='width:60px; display: inline-block;' > ";
-					echo "<button type='submit' class='btn btn-info' class='submit_button' style='margin-bottom: 3px; margin-left: 25px;'>Thêm vào giỏ</button>";
-				echo "</form>"; 
-			echo "</td>";
-		echo "</tr>";
-		echo "<tr>";
-			echo "<td colspan='2' >";
-				echo "<br>";
-				echo "<br>";
-				echo $tv_2['noi_dung'];
-			echo "</td>";
-		echo "</tr>";
-	echo "</table>";
-?>
+			?>
+			<form>
+				<input type='hidden' name='thamso' value='gio_hang' >
+				<?php echo "<input type='hidden' name='id' value='".$_GET['id']."' >" ?>
+				<input type='text'  class='form-control' name='so_luong' value='1' style='width:60px; display: inline-block;' >
+				<button type='submit' class='btn btn-warning' class='submit_button' style='margin-bottom: 3px; margin-left: 25px;'>Thêm vào giỏ</button>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2' >
+			<?php echo $tv_2['noi_dung']; ?>
+		</td>
+	</tr>
+</table>

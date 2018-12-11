@@ -29,5 +29,7 @@
 		default:
 			include("chuc_nang/slideshow/slideshow.php");	
 			include("chuc_nang/san_pham/main_product.php");	
+			include("chuc_nang/san_pham/new_product.php"); 
+			include("chuc_nang/san_pham/hot_product.php"); 
 	}
 ?>

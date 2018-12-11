@@ -90,7 +90,7 @@
 			}	
 			echo "<tr>";
 				echo "<td>&nbsp;</td>";
-				echo "<td><input type='submit' class='btn btn-info' value='Cập nhật' > </td>";
+				echo "<td><input type='submit' class='btn btn-warning' value='Cập nhật' > </td>";
 				echo "<td>&nbsp;</td>";
 				echo "<td>&nbsp;</td>";
 			echo "</tr>";	

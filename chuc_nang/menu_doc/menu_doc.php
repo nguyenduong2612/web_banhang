@@ -5,25 +5,15 @@
 ?>	
 
 <div class='menu_doc'>
-	<div class="sidetitle"><span>Danh mục</span></div>
-	<button class="navbar-toggler" type="button" style="position: absolute; left: 10px; top: 96px;">
-    	<span class="fas fa-bars"></span>
-  	</button>
 	<?php 
-		echo "<div class='collapse'>";
+		echo "<div>";
 		while($tv_2=mysqli_fetch_array($tv_1))
 		{
 			$link="?thamso=caterogy&id=".$tv_2['id'];
-			echo "<a href='$link'>";
+			echo "<a style='margin: 5px 0;' href='$link'>";
 				echo $tv_2['ten'];
 			echo "</a>";
 		}
 		echo "</div>";
 	?>
 </div>
-
-<script type="text/javascript">
-	$('.navbar-toggler').click(function(){
-    	$('.collapse').slideToggle();
-	});
-</script>

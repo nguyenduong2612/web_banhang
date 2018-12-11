@@ -1,4 +1,4 @@
-<div class="sidetitle">
+<div class="sidetitle" style="display: block; font-size: 24px; padding: 15px 0;">
 	<span>Giỏ hàng</span>
 </div>
 
@@ -14,6 +14,6 @@
 ?>
 
 Số lượng món trong giỏ : <?php echo $so_luong; ?>
-<br><br>
-<input type="button" class="btn btn-info" onclick="window.location.href='?thamso=gio_hang'" value="Đặt hàng" style="margin: 0 87px; " />
+<br>
+<input type="button" class="btn btn-warning" onclick="window.location.href='?thamso=gio_hang'" value="Đặt hàng" style="margin: 15px 0; " />
 
