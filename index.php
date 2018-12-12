@@ -25,6 +25,7 @@
 	</head>
 	<body style="font-family: 'Quicksand', sans-serif; width: auto; position: relative;">
 		<div class="header">
+			<a href="#"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
 			<?php 
 				include("chuc_nang/tim_kiem/vung_tim_kiem.php");
 			?>
