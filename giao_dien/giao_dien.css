@@ -122,6 +122,8 @@ a
 	background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding-bottom: 35px;
+
 }
 
 #main_product {
@@ -206,7 +208,7 @@ a
 	text-decoration: none;
 	color: #d39e00;
 }
-.product span.price {
+.price {
 	display: block;
 	font-size: 20px;
     width: 100%;
@@ -217,7 +219,7 @@ a
 .title span {
 	display: block;
 	padding: 40px;
-	font-size: 35px;
+	font-size: 40px;
 }
 .product_name {
 	display: block;
@@ -230,8 +232,19 @@ a
 .name_detail span {
 	display: inline-block;
 }
+.name_detail a {
+	color: #ffc107;
+}
 .name_detail a:hover {
+	color: #d39e00;
 	text-decoration: none;
+}
+.noti {
+	display: block;
+    width: 100%;
+    padding: 50px 10%;
+    font-size: 30px;
+
 }
 .search_input {
 	background-color: #f2f2f2;
@@ -264,8 +277,19 @@ a
 	padding: 30px;
 }
 
-.about {
-	display: block;
-	font-size: 25px;
+.about .member {
+	width: 49.7%;
+	display: inline-block;
 	text-align: center;
+	margin: 3% 0;
+}
+.about .member img {
+	border-radius: 50%;
+	width: 250px;
+}
+.about .member_name {
+	font-size: 30px;
+	color: #ffc107;
+	display: block;
+	padding-top: 30px;
 }

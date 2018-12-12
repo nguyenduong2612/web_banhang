@@ -1,7 +1,7 @@
 <div class="title">
 	<span>Tất cả món ăn</span> 
 </div>
-<div class="product_container">
+
 <?php 
 	include("ket_noi.php");	
 	$so_du_lieu=15;
@@ -14,6 +14,7 @@
 	
 	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham order by id desc limit $vtbd,$so_du_lieu";
 	$tv_1=mysqli_query($conn,$tv);
+	echo "<div class='product_container'>";
 	while($tv_2=mysqli_fetch_array($tv_1))
 	{
 			for($i=1;$i<=3;$i++)
@@ -41,6 +42,7 @@
 				}
 			}
 	}
+	echo "</div>";
 	echo "<div class='more' >";
 		for($i=1;$i<=$so_trang;$i++)
 		{
@@ -51,4 +53,3 @@
 		}
 	echo "</div>";
 ?>
-</div>

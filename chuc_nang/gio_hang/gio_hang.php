@@ -50,13 +50,13 @@
 	echo "<div class='title'><span>Giỏ hàng</span></div>";
 	if($gio_hang=="khong")
 	{
-		echo "Không có món ăn trong giỏ hàng";
+		echo "<span class='noti'>Không có món ăn trong giỏ hàng</span>";
 	}
 	else 
 	{
 		echo "<form action='' method='post' >"; 
 		echo "<input type='hidden' name='cap_nhat_gio_hang' value='co' > ";
-		echo "<table class='table' style='width: 90%;margin: 0 5%;'>";
+		echo "<table class='table' style='width: 80%;margin: 0 10%; font-size: 20px;'>";
 			echo "<thead class='thead-light'>";
 				echo "<th width='200px' >Tên</td>";
 				echo "<th width='150px' >Số lượng</td>";
@@ -77,7 +77,7 @@
 				$name_sl="sl_".$i;
 				if($_SESSION['sl_them_vao_gio'][$i]!=0)
 				{
-				echo "<tr>";
+				echo "<tr style='color: #fff;'>";
 					echo "<td>".$tv_2['ten']."</td>";
 					echo "<td>";
 					echo "<input type='hidden' name='".$name_id."' value='".$_SESSION['id_them_vao_gio'][$i]."' >";
@@ -96,8 +96,7 @@
 			echo "</tr>";	
 		echo "</table>";
 		echo "</form>";
-		echo "<br>";
-		echo "<b>Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ</b>";
+		echo "<span class='noti'>Tổng giá trị đơn hàng là : <b style='color: #ffc107;'>".$tong_cong."</b> VNĐ</span>";
 		include("chuc_nang/gio_hang/bieu_mau_mua_hang.php");
 	}
 	
