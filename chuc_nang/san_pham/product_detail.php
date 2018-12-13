@@ -3,13 +3,13 @@
 	$_SESSION['trang_chi_tiet_gio_hang']="co";
 	$id=$_GET['id'];
 	$tv="select * from san_pham where id='$id'";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$menu = $tv_2['thuoc_menu'];
 	$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
 	$link_chi_tiet="?thamso=caterogy&id=".$tv_2['thuoc_menu'];
-	$query_name = mysqli_query($conn,"select * from menu_doc where id='$menu';");
-	$get_name = mysqli_fetch_array($query_name);
+	$query_name = pg_query($conn,"select * from menu_doc where id='$menu';");
+	$get_name = pg_fetch_array($query_name);
 ?>
 <div class="name_detail noti">
 	<a href="<?php echo $link_chi_tiet ?>"> <?php echo $get_name['ten']; ?> </a> 

@@ -13,7 +13,7 @@
 		ten = '$ten_menu'
 		WHERE id =$id;
 		";
-		mysqli_query($conn,$tv);
+		pg_query($conn,$tv);
 	}
 	else 
 	{

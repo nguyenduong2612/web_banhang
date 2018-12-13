@@ -2,7 +2,7 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
-	$tv="select * from footer limit 0,1 ";
+	$tv="select * from footer limit 1 offset 0 ";
 	$tv_1=mysql_query($tv);
 	$tv_2=mysql_fetch_array($tv_1);
 	$noi_dung=$tv_2['html'];

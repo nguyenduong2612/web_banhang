@@ -5,9 +5,9 @@
 	<div class="product_container">
 	<?php 
 		include("ket_noi.php");	
-		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit 0,6";
-		$tv_1=mysqli_query($conn,$tv);
-		while($tv_2=mysqli_fetch_array($tv_1))
+		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit 6 offset 0";
+		$tv_1=pg_query($conn,$tv);
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 				for($i=1;$i<=3;$i++)
 				{
@@ -40,7 +40,7 @@
 					}
 					if($i!=3)
 					{
-						$tv_2=mysqli_fetch_array($tv_1);
+						$tv_2=pg_fetch_array($tv_1);
 					}
 				}
 		}

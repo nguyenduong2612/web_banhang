@@ -5,8 +5,8 @@
 	include("../ket_noi.php");	
 	$id=$_GET['id'];
 	$tv="select * from hoa_don where id='$id' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$ten_nguoi_mua=$tv_2['ten_nguoi_mua'];
 	$email=$tv_2['email'];
 	$dien_thoai=$tv_2['dien_thoai'];
@@ -48,8 +48,8 @@
 								$id_sp=$m_2[0];
 								$sl_sp=$m_2[1];
 								$tv_sp="select id,ten,gia from san_pham where id='$id_sp' ";
-								$tv_sp_1=mysqli_query($conn,$tv_sp);
-								$tv_sp_2=mysqli_fetch_array($tv_sp_1);
+								$tv_sp_1=pg_query($conn,$tv_sp);
+								$tv_sp_2=pg_fetch_array($tv_sp_1);
 								$ten=$tv_sp_2['ten'];
 								$gia=$tv_sp_2['gia'];
 								$gia_duoc_dinh_dang=number_format($gia,0,",",".");

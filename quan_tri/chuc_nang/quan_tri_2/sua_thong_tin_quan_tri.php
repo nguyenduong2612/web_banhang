@@ -2,10 +2,10 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
-	include("ket_noi.php");	
+	include("../ket_noi.php");	
 	$tv="select * from thong_tin_quan_tri where id='1' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$ky_danh=$tv_2['ky_danh'];	
 ?>
 <form action="" method="post" >

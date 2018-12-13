@@ -16,7 +16,7 @@
 					sap_xep_trang_chu='$sap_xep_trang_chu' 
 					where id='$id';
 			";
-			mysqli_query($conn,$tv);
+			pg_query($conn,$tv);
 		}
 	}
 ?>

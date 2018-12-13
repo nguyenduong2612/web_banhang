@@ -1,10 +1,10 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
-	include("ket_noi.php");	
+	include("../ket_noi.php");	
 ?>
 <?php 
 	$tv="select * from slideshow order by id ";
-	$tv_1=mysqli_query($conn,$tv);
+	$tv_1=pg_query($conn,$tv);
 ?>
 
 <table width="990px" class="tb_a1" >
@@ -14,7 +14,7 @@
 		<td align="center" width="140px" ><b>Xóa</b></td>
 	</tr>
 	<?php 
-		while($tv_2=mysqli_fetch_array($tv_1))
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 			$id=$tv_2['id'];
 			$link_hinh="../hinh_anh/slideshow/".$tv_2['hinh'];

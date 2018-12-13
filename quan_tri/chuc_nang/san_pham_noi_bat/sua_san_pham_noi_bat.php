@@ -13,7 +13,7 @@
 					noi_bat='$noi_bat' 
 					where id='$id';
 			";
-			mysqli_query($conn,$tv);
+			pg_query($conn,$tv);
 		}
 	}
 ?>

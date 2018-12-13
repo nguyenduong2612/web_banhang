@@ -4,8 +4,8 @@
 <?php 
 	include("ket_noi.php");	
 	$tv="select * from thong_tin_quan_tri where id='1' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$ky_danh=$_POST['ky_danh'];
 	$mat_khau=$tv_2['mat_khau'];
 
@@ -22,7 +22,7 @@
 	mat_khau = '$mat_khau' 
 	WHERE id =1;
 	";
-	mysqli_query($conn,$tv);
+	pg_query($conn,$tv);
 	
 	$_SESSION['ky_danh']=$ky_danh;
 	$_SESSION['mat_khau']=$mat_khau;

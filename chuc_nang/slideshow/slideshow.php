@@ -1,8 +1,8 @@
 <!-- <?php 
 /*	include("ket_noi.php");	
 	$tv="select hinh,lien_ket from slideshow order by id";
-	$tv_1=mysqli_query($conn,$tv);
-	while($tv_2=mysqli_fetch_array($tv_1))
+	$tv_1=pg_query($conn,$tv);
+	while($tv_2=pg_fetch_array($tv_1))
 	{
 		$link_hinh="hinh_anh/slideshow/".$tv_2['hinh'];
 		echo "<img src='".$link_hinh."'>";

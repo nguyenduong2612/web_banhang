@@ -21,18 +21,18 @@
 
 		$so_du_lieu=16;
 		$tv="select count(*) from san_pham  where $chuoi_tim_sql_2";
-		$tv_1=mysqli_query($conn,$tv);
-		$tv_2=mysqli_fetch_array($tv_1);
+		$tv_1=pg_query($conn,$tv);
+		$tv_2=pg_fetch_array($tv_1);
 		echo "<span class='noti'>Tìm thấy ".$tv_2[0]." món ăn phù hợp với '".$_GET['tu_khoa']."'</span>";
 		$so_trang=ceil($tv_2[0]/$so_du_lieu);
 		
 		if(!isset($_GET['trang'])){$vtbd=0;}else{$vtbd=($_GET['trang']-1)*$so_du_lieu;}
 		
-		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where $chuoi_tim_sql_2 order by id desc limit $vtbd,$so_du_lieu";
+		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where $chuoi_tim_sql_2 order by id desc limit $so_du_lieu offset $vtbd";
 
-		$tv_1=mysqli_query($conn,$tv);
+		$tv_1=pg_query($conn,$tv);
 		echo "<div class='product_container'>";
-		while($tv_2=mysqli_fetch_array($tv_1))
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 				for($i=1;$i<=3;$i++)
 				{
@@ -53,7 +53,7 @@
 					}
 					if($i!=3)
 					{
-						$tv_2=mysqli_fetch_array($tv_1);
+						$tv_2=pg_fetch_array($tv_1);
 					}
 				}
 		}

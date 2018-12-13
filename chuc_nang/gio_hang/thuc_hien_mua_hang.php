@@ -32,7 +32,7 @@
             '$noi_dung',
             '$hang_duoc_mua'
             );";
-			mysqli_query($conn, $tv);
+			pg_query($conn, $tv);
 			unset($_SESSION['id_them_vao_gio']);
 			unset($_SESSION['sl_them_vao_gio']);
 			$success = "Cảm ơn bạn đã mua hàng tại web site chúng tôi";

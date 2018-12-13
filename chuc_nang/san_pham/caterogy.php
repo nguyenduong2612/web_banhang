@@ -4,10 +4,10 @@
 	
 	$so_du_lieu=15;
 	$tv="select count(*) from san_pham where thuoc_menu='$id';";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
-	$query_name = mysqli_query($conn,"select * from menu_doc where id='$id';");
-	$get_name = mysqli_fetch_array($query_name);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
+	$query_name = pg_query($conn,"select * from menu_doc where id='$id';");
+	$get_name = pg_fetch_array($query_name);
 	$so_trang=ceil($tv_2[0]/$so_du_lieu);
 ?>
 <div class="title">
@@ -17,10 +17,10 @@
 <?php
 	if(!isset($_GET['page'])){$vtbd=0;}else{$vtbd=($_GET['page']-1)*$so_du_lieu;}
 	
-	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where thuoc_menu='$id' order by id desc limit $vtbd,$so_du_lieu";
-	$tv_1=mysqli_query($conn,$tv);
+	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where thuoc_menu='$id' order by id desc limit $so_du_lieu offset $vtbd";
+	$tv_1=pg_query($conn,$tv);
 	echo "<div class='product_container'>";
-	while($tv_2=mysqli_fetch_array($tv_1))
+	while($tv_2=pg_fetch_array($tv_1))
 	{
 			for($i=1;$i<=3;$i++)
 			{
@@ -52,7 +52,7 @@
 				}
 				if($i!=3)
 				{
-					$tv_2=mysqli_fetch_array($tv_1);
+					$tv_2=pg_fetch_array($tv_1);
 				}
 			}
 	}

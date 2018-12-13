@@ -4,8 +4,8 @@
 <?php 
 	$id=$_GET['id'];
 	$tv="select * from san_pham where id='$id' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$ten=$tv_2['ten'];
 	$gia=$tv_2['gia'];
 	$trang_chu=$tv_2['trang_chu'];

@@ -5,12 +5,12 @@
 	include("ket_noi.php");	
 	$id=$_GET['id'];
 	$tv="select count(*) from san_pham where thuoc_menu='$id' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	if($tv_2[0]==0)
 	{
 		$truy_van_xoa="DELETE FROM menu_doc WHERE id = $id ";
-		mysqli_query($conn,$truy_van_xoa);
+		pg_query($conn,$truy_van_xoa);
 	}
 	else 
 	{

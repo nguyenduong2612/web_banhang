@@ -5,9 +5,9 @@
 	<div class="product_container">
 		<?php 
 			include("ket_noi.php");	
-			$tv="select id,ten,hinh_anh,gia from san_pham where noi_bat='co' order by id desc limit 0,6";
-			$tv_1=mysqli_query($conn,$tv);
-			while($tv_2=mysqli_fetch_array($tv_1))
+			$tv="select id,ten,hinh_anh,gia from san_pham where noi_bat='co' order by id desc limit 6 offset 0";
+			$tv_1=pg_query($conn,$tv);
+			while($tv_2=pg_fetch_array($tv_1))
 			{
 				echo "<div class='product'>";
 					$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];

@@ -14,16 +14,16 @@
 	$noi_dung=$_POST['noi_dung'];
 	$noi_dung=str_replace("'","&#39;",$noi_dung);
 	$tv_m="select max(sap_xep_trang_chu) from san_pham";
-	$tv_m_1=mysqli_query($conn,$tv_m);
-	$tv_m_2=mysqli_fetch_array($tv_m_1);
+	$tv_m_1=pg_query($conn,$tv_m);
+	$tv_m_2=pg_fetch_array($tv_m_1);
 	$sap_xep_trang_chu=$tv_m_2[0]+1;
 	if($ten!="")
 	{
 		if($ten_file_anh!="")
 		{
 			$tv_k="select count(*) from san_pham where hinh_anh='$ten_file_anh' ";
-			$tv_k_1=mysqli_query($conn,$tv_k);
-			$tv_k_2=mysqli_fetch_array($tv_k_1);
+			$tv_k_1=pg_query($conn,$tv_k);
+			$tv_k_2=pg_fetch_array($tv_k_1);
 			if($tv_k_2[0]==0)
 			{
 				$tv="
@@ -49,7 +49,7 @@
 				'$trang_chu',
 				'$sap_xep_trang_chu'
 				);";
-				mysqli_query($conn,$tv);
+				pg_query($conn,$tv);
 
 				$duong_dan_anh="../hinh_anh/san_pham/".$ten_file_anh;
 				move_uploaded_file($_FILES['hinh_anh']['tmp_name'],$duong_dan_anh);

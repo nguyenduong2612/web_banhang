@@ -3,10 +3,10 @@
 ?>
 
 <?php 
-	include("ket_noi.php");	
-	$tv="select id,ten,gia,hinh_anh from san_pham where noi_bat='co' order by id desc limit 0,10";
+	include("../ket_noi.php");	
+	$tv="select id,ten,gia,hinh_anh from san_pham where noi_bat='co' order by id desc limit 10 offset 0";
 
-	$tv_1=mysqli_query($conn,$tv);
+	$tv_1=pg_query($conn,$tv);
 ?>
 <div style="width:990px;text-align:left" >
 	<form method="post" >
@@ -19,7 +19,7 @@
 			</tr>
 			<?php 
 				$i=1;
-				while($tv_2=mysqli_fetch_array($tv_1))
+				while($tv_2=pg_fetch_array($tv_1))
 				{
 					$id=$tv_2['id'];
 					$ten=$tv_2['ten'];

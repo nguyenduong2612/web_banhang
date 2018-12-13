@@ -7,13 +7,13 @@
 	if(!isset($_GET['trang'])){$_GET['trang']=1;}
 	
 	$tv="select count(*) from hoa_don";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$so_trang=ceil($tv_2[0]/$so_dong_tren_mot_trang);
 	
 	$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
-	$tv="select * from hoa_don order by id desc limit $vtbd,$so_dong_tren_mot_trang";
-	$tv_1=mysqli_query($conn,$tv);
+	$tv="select * from hoa_don order by id desc limit $so_dong_tren_mot_trang offset $vtbd";
+	$tv_1=pg_query($conn,$tv);
 ?>
 <table width="990px" class="tb_a1" >
 	<tr style="background:#CCFFFF;height:40px;" >
@@ -24,7 +24,7 @@
 		<td align="center" width="100px" ><b>Xóa</b></td>
 	</tr>
 	<?php 
-		while($tv_2=mysqli_fetch_array($tv_1))
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten_nguoi_mua'];

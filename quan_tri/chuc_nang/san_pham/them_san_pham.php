@@ -25,9 +25,9 @@
 				<select name="danh_muc" style="margin-top:3px;margin-bottom:3px;" >
 					<?php 
 						$tv="select * from menu_doc order by id ";
-						$tv_1=mysqli_query($conn,$tv);
+						$tv_1=pg_query($conn,$tv);
 						$a="";
-						while($tv_2=mysqli_fetch_array($tv_1))
+						while($tv_2=pg_fetch_array($tv_1))
 						{
 							$ten=$tv_2['ten'];
 							$id_menu=$tv_2['id'];

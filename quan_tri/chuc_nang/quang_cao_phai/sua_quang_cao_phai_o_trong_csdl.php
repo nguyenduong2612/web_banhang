@@ -9,5 +9,5 @@
 	html = '$noi_dung'
 	WHERE vi_tri='phai';
 	";
-	mysqli_query($conn,$tv);
+	pg_query($conn,$tv);
 ?>

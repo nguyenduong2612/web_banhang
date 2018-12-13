@@ -3,8 +3,8 @@
 ?>
 <?php 
 	$tv="select * from quang_cao where vi_tri='phai' ";
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$noi_dung=$tv_2['html'];
 ?>
 <form action="" method="post" enctype="multipart/form-data" >

@@ -12,8 +12,8 @@
 		{
 			$so_luong=$so_luong+$_SESSION['sl_them_vao_gio'][$i];
 			$tv="select id,ten,gia from san_pham where id='".$_SESSION['id_them_vao_gio'][$i]."'";
-			$tv_1=mysqli_query($conn,$tv);
-			$tv_2=mysqli_fetch_array($tv_1);
+			$tv_1=pg_query($conn,$tv);
+			$tv_2=pg_fetch_array($tv_1);
 
 			if($_SESSION['sl_them_vao_gio'][$i]!=0)
 			{

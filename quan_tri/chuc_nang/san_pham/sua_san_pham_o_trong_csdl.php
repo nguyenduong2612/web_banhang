@@ -23,8 +23,8 @@
 	if($ten!="")
 	{
 		$tv_k="select count(*) from san_pham where hinh_anh='$ten_file_anh' ";
-		$tv_k_1=mysqli_query($conn,$tv_k);
-		$tv_k_2=mysqli_fetch_array($tv_k_1);
+		$tv_k_1=pg_query($conn,$tv_k);
+		$tv_k_2=pg_fetch_array($tv_k_1);
 		if($tv_k_2[0]==0 or $ten_file_anh_tai_len=="")
 		{
 			$tv="
@@ -37,7 +37,7 @@
 			noi_bat = '$noi_bat' 
 			WHERE id =$id;
 			";
-			mysqli_query($conn,$tv);
+			pg_query($conn,$tv);
 			
 			if($ten_file_anh_tai_len!="")
 			{				

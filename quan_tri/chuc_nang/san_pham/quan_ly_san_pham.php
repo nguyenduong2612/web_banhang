@@ -24,9 +24,9 @@
 	<option value="" >Toàn bộ sản phẩm</option>
 	<?php 
 		$tv="select * from menu_doc order by id ";
-		$tv_1=mysqli_query($conn,$tv);
+		$tv_1=pg_query($conn,$tv);
 		$a="";
-		while($tv_2=mysqli_fetch_array($tv_1))
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 			$ten=$tv_2['ten'];
 			$id=$tv_2['id'];
@@ -55,20 +55,20 @@
 	{
 		$tv="select count(*) from san_pham where thuoc_menu='$id_menu' ";
 	}
-	$tv_1=mysqli_query($conn,$tv);
-	$tv_2=mysqli_fetch_array($tv_1);
+	$tv_1=pg_query($conn,$tv);
+	$tv_2=pg_fetch_array($tv_1);
 	$so_trang=ceil($tv_2[0]/$so_dong_tren_mot_trang);
 	
 	$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
 	if($id_menu=="toan_bo_san_pham")
 	{
-		$tv="select id,ten,gia,hinh_anh from san_pham order by id desc limit $vtbd,$so_dong_tren_mot_trang";
+		$tv="select id,ten,gia,hinh_anh from san_pham order by id desc limit $so_dong_tren_mot_trang offset $vtbd";
 	}
 	else 
 	{
-		$tv="select id,ten,gia,hinh_anh from san_pham where thuoc_menu='$id_menu' order by id desc limit $vtbd,$so_dong_tren_mot_trang";
+		$tv="select id,ten,gia,hinh_anh from san_pham where thuoc_menu='$id_menu' order by id desc limit $so_dong_tren_mot_trang offset $vtbd";
 	}
-	$tv_1=mysqli_query($conn,$tv);
+	$tv_1=pg_query($conn,$tv);
 ?>
 
 <table width="990px" class="tb_a1" >
@@ -80,7 +80,7 @@
 		<td align="center" width="140px" ><b>Xóa</b></td>
 	</tr>
 	<?php 
-		while($tv_2=mysqli_fetch_array($tv_1))
+		while($tv_2=pg_fetch_array($tv_1))
 		{
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten'];
