@@ -1,3 +1,4 @@
+
 <?php 
 	include("ket_noi.php");	
 	if(isset($_GET['id']) and $_SESSION['trang_chi_tiet_gio_hang']=="co")
@@ -56,12 +57,13 @@
 	{
 		echo "<form action='' method='post' >"; 
 		echo "<input type='hidden' name='cap_nhat_gio_hang' value='co' > ";
-		echo "<table class='table' style='width: 80%;margin: 0 10%; font-size: 20px;'>";
+		echo "<table class='table' style='width: 80%;margin: 0 10%; font-size: 20px; position: relative;'>";
 			echo "<thead class='thead-light'>";
-				echo "<th width='200px' >Tên</td>";
-				echo "<th width='150px' >Số lượng</td>";
-				echo "<th width='150px' >Đơn giá</td>";
-				echo "<th width='170px' >Thành tiền</td>";
+				echo "<th width='200px' >Tên</th>";
+				echo "<th width='150px' >Số lượng</th>";
+				echo "<th width='150px' >Đơn giá</th>";
+				echo "<th width='170px' >Thành tiền</th>";
+				echo "<th width='85px' ></th>";
 			echo "</thead>";
 			$tong_cong=0;
 			for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
@@ -85,12 +87,16 @@
 					echo "</td>";
 					echo "<td>".$tv_2['gia']."</td>";
 					echo "<td>".$tien."</td>";
+					echo "<td>";
+					echo "<input type='button' class='delete form-control btn btn-danger' name='".$name_sl."' value='Xoá' ></input>";
+					echo "</td>";
 				echo "</tr>";
 				}
 			}	
 			echo "<tr>";
 				echo "<td>&nbsp;</td>";
-				echo "<td><input type='submit' class='btn btn-warning' value='Cập nhật' > </td>";
+				echo "<td><input type='submit' class='ok btn btn-warning' value='Cập nhật' > </td>";
+				echo "<td>&nbsp;</td>";
 				echo "<td>&nbsp;</td>";
 				echo "<td>&nbsp;</td>";
 			echo "</tr>";	
@@ -101,3 +107,10 @@
 	}
 	
 ?>
+<script type="text/javascript">
+	$(".delete").click(function(){
+    	$(this).attr('value', '0');
+    	$(this).attr('type', 'submit');
+	});
+</script>
+

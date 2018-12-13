@@ -48,10 +48,7 @@
 							echo "</a>";
 							echo "<a class='product_name' href='$link_chi_tiet' >";
 								echo $tv_2['ten'];
-							echo "</a>";
-							echo "<span class='price'>";						
-							echo $gia;
-							echo "</span>";							
+							echo "</a>";						
 						echo "</div>";
 					}
 					if($i!=3)
