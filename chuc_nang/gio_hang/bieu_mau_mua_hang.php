@@ -10,8 +10,16 @@
   			<div class="input-group-prepend">
     			<span class="input-group-text" id="inputGroup-sizing-lg">Tên người mua</span>
   			</div>
-  			<input type="text" name='ten_nguoi_mua' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <?php 
+        if(!isset($_SESSION['login_user'])){
+          echo "<input type='text' name='ten_nguoi_mua' class='form-control' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-lg'>";
+        } else if(isset($_SESSION['login_user'])) {
+          $name = $_SESSION['login_user'];
+          echo "<input type='text' name='ten_nguoi_mua' class='form-control' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-lg' value='$name'>";
+        }
+  			?>
 		</div>
+
     <br>
 		<div class="input-group input-group-lg">
   			<div class="input-group-prepend">
@@ -20,6 +28,7 @@
   			<input type="text" name='email' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 		</div>
     <br>
+
 		<div class="input-group input-group-lg">
   			<div class="input-group-prepend">
     			<span class="input-group-text" id="inputGroup-sizing-lg">Địa chỉ</span>
@@ -27,6 +36,7 @@
   			<input type="text" name='dia_chi' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 		</div>
     <br>
+
 		<div class="input-group input-group-lg">
   			<div class="input-group-prepend">
     			<span class="input-group-text" id="inputGroup-sizing-lg">Điện thoại</span>
@@ -34,6 +44,7 @@
   			<input type="text" name='dien_thoai' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 		</div>
     <br>
+
 		<div class="input-group input-group-lg">
   			<div class="input-group-prepend">
     			<span class="input-group-text" id="inputGroup-sizing-lg">Nội dung</span>
@@ -41,6 +52,7 @@
   			<input type="text" name='noi_dung' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 		</div>
 	  <br>	
+
 		<button type="submit" class="btn btn-warning" style="font-size: 20px">Mua hàng</button>
 
 	 </div>	 
