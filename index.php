@@ -1,7 +1,7 @@
 <?php
 	session_start();
     include("ket_noi.php");	
-    include("chuc_nang/ham/ham.php");	
+    include("chuc_nang/ham/ham.php");
 	if(isset($_POST['thong_tin_khach_hang']))
 	{
 		include("chuc_nang/gio_hang/thuc_hien_mua_hang.php");
@@ -26,12 +26,14 @@
 	</head>
 	<body style="font-family: 'Quicksand', sans-serif; width: auto; position: relative;">
 		<div class="header">
-			<div class="button">
-				<!-- <a href="#">Dang nhap</a> -->
-				<?php 
-				include("chuc_nang/login/login.php");
-				?>
-			</div>
+			<?php 
+			if(!isset($_SESSION['login_user'])){
+				echo "<a class='btn btn-danger login_button' href='?thamso=login'>Đăng nhập</a>";
+			} else if(isset($_SESSION['login_user'])) {
+				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span>".$_SESSION['login_user']."</span>";
+				echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
+			}
+			?>
 			<a href="#"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
 			<?php 
 				include("chuc_nang/tim_kiem/vung_tim_kiem.php");
