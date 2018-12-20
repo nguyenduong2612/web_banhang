@@ -2,6 +2,15 @@
 	if(isset($_GET['thamso'])){$thamso=$_GET['thamso'];}else{$thamso="";}
 	switch($thamso)
 	{
+		case "login":
+			include("chuc_nang/login/login.php");
+		break;
+		case "logout":
+			include("chuc_nang/login/logout.php");
+		break;
+		case "register":
+			include("chuc_nang/login/register.php");
+		break;
 		case "caterogy":
 			include("chuc_nang/san_pham/caterogy.php");
 		break;
