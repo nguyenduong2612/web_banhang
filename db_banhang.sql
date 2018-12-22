@@ -153,9 +153,6 @@ CREATE TABLE "khach_hang"
     "dien_thoai" varchar(256)  NOT NULL
 ); 
 
-INSERT INTO "khach_hang" ("id", "ten_khach_hang", "mat_khau", "email", "dia_chi", "dien_thoai") VALUES
-('1', 'admin', 'admin', 'admin@gmail.com', 'hanoi', '0123456789');
-
 ALTER TABLE "khach_hang" ADD UNIQUE (ten_khach_hang);
 
 ------------------------------------------- 

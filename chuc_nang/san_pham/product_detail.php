@@ -88,7 +88,7 @@
 				<?php 
 				$get_review_query = "select * from review where sp_id = '$id'";
 				// $result = pg_query($conn, $query);
-				$get_average_star = "select AVG(star) from review";
+				$get_average_star = "select AVG(star) from review where sp_id = '$id'";
 				$avg = pg_query($conn,$get_average_star);
 				$row = pg_fetch_array($avg);
 				$average_star = round($row['avg'],1);
@@ -179,7 +179,7 @@
 }
 ?>
 	    <input type="text" class="form-control" name="content" >
-	  	<input type="submit" class="btn btn-primary" style="margin-top: 10px" value="Binh luan">
+	  	<input type="submit" class="btn btn-primary" style="margin-top: 10px" value="Bình luận">
 	  	</div>
 	  	
 	  	<!-- <button type="button" class="btn btn-primary" onclick="window.location.href='?thamso=register'">Đăng ký</button> -->
