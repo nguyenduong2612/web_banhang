@@ -36,7 +36,7 @@
 				}
 
 			} else if(isset($_SESSION['login_user'])) {
-				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span>".$_SESSION['login_user']."</span>";
+				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span><a href='?thamso=profile'>".$_SESSION['login_user']."</a></span>";
 				echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
 			}
 			?>
