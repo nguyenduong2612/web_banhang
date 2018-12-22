@@ -167,6 +167,6 @@ CREATE TABLE "review" (
   "sp_id" int NOT NULL,
   "star" int NOT NULL,
   "comment" varchar(256) NOT NULL,
-  foreign key ("username") references "khach_hang" ("username"),
+  foreign key ("username") references "khach_hang" ("ten_khach_hang"),
   foreign key ("sp_id") references "san_pham" ("id")
 );
