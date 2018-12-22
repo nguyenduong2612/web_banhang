@@ -143,16 +143,24 @@ INSERT INTO "thong_tin_quan_tri" ("id", "ky_danh", "mat_khau") VALUES
 
 -------------------------------------------------
 
-CREATE TABLE "khach_hang" (
-  "id" int primary key,
-  "username" varchar(256)  NOT NULL,
-  "pass" varchar(256) NOT NULL
-);
+CREATE TABLE "khach_hang"
+(
+    "id" serial PRIMARY KEY,
+    "ten_khach_hang" varchar(256) NOT NULL,
+    "mat_khau" varchar(256)  NOT NULL,
+    "email" varchar(256)  NOT NULL,
+    "dia_chi" varchar(256)  NOT NULL,
+    "dien_thoai" varchar(256)  NOT NULL,
+    CONSTRAINT khach_hang_pkey PRIMARY KEY (id)
+); 
 
-INSERT INTO "khach_hang" ("id", "username", "pass") VALUES
-('1', 'admin', 'admin');
+INSERT INTO "khach_hang" ("id", "ten_khach_hang", "mat_khau", "email", "dia_chi", "dien_thoai") VALUES
+('1', 'admin', 'admin', 'admin@gmail.com', 'hanoi', '0123456789');
 
-ALTER TABLE "khach_hang" ADD UNIQUE (username);
+ALTER TABLE "khach_hang" ADD UNIQUE (ten_khach_hang);
+
+------------------------------------------- 
+
 CREATE TABLE "review" (
   "id" int primary key,
   "username"  varchar(256) NOT NULL,
