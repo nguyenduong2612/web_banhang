@@ -153,3 +153,12 @@ INSERT INTO "khach_hang" ("id", "username", "pass") VALUES
 ('1', 'admin', 'admin');
 
 ALTER TABLE "khach_hang" ADD UNIQUE (username);
+CREATE TABLE "review" (
+  "id" int primary key,
+  "username"  varchar(256) NOT NULL,
+  "sp_id" int NOT NULL,
+  "star" int NOT NULL,
+  "comment" varchar(256) NOT NULL,
+  foreign key ("username") references "khach_hang" ("username"),
+  foreign key ("sp_id") references "san_pham" ("id")
+);
