@@ -12,6 +12,7 @@
 		trang_truoc();
 	}	
 ?> 
+
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -23,16 +24,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	</head>
 	<body style="font-family: 'Quicksand', sans-serif; width: auto; position: relative;">
 		<div class="header">
-			<div class="button">
-				<!-- <a href="#">Dang nhap</a> -->
-				<?php 
-				include("chuc_nang/login/login.php");
-				?>
-			</div>
-			<a href="#"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
+		<?php 
+			if(!isset($_SESSION['login_user'])){
+				echo "<a class='btn btn-danger' href='?thamso=login' role='button' style='margin-bottom: 3px;position: absolute;right: 122px ;top: 30px'>Đăng nhập</a>";
+				echo "<a class='btn btn-success go-to-register' href='#register' role='button' style='margin-bottom: 3px;position: absolute;right: 26px ;top: 30px'>Đăng kí</a>";
+			} else if(isset($_SESSION['login_user'])) {
+				include("chuc_nang/login/login.html");
+				echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
+			}
+			?>	
+			<a href="./index.php"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
 			<?php 
 				include("chuc_nang/tim_kiem/vung_tim_kiem.php");
 			?>
