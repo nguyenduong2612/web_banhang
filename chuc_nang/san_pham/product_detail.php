@@ -10,6 +10,46 @@
 	$link_chi_tiet="?thamso=caterogy&id=".$tv_2['thuoc_menu'];
 	$query_name = pg_query($conn,"select * from menu_doc where id='$menu';");
 	$get_name = pg_fetch_array($query_name);
+
+	
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+		if(isset($_SESSION['login_user'])) {
+
+		// $comment_content = $_POST['comment_content'];
+		$newcomment = $_POST['content'];
+		// $lencomment = strlen($_POST['content']);
+		
+
+		$tv_count = pg_query($conn, "select * from review");
+		$count = pg_num_rows($tv_count);
+
+		$comment_id = $count + 1;
+		$username = $_SESSION['login_user'];
+		$star = $_POST['rate1'];
+		$sp_id = $id;
+
+		// if ($lencomment == 0) {
+		// 	// echo "<p class='fail_noti'>Please input your comment</p>";
+		// 	$newcomment = "";
+		// 	$query = "insert into review values ('$comment_id', '$user_id', '$sp_id','$star','$newcomment') ";
+		// 	$result = pg_query($conn, $query);
+		// }
+		// else {
+			$query = "insert into review values ('$comment_id', '$username', '$sp_id','$star','$newcomment') ";
+			$result = pg_query($conn, $query);
+			header("Location: index.php?thamso=product_detail&id=$sp_id");
+			// if ($result) {
+			// 	header("Location: index.php?thamso=login");
+			// 	echo "<script>alert('Đăng ký tài khoản thành công !')</script>";
+			// } else echo pg_last_error($conn);
+		// }
+		}
+		else {
+			echo "<p class='fail_noti'>Please login to review this product</p>";
+		}
+		
+	}
 ?>
 <div class="name_detail noti">
 	<a href="<?php echo $link_chi_tiet ?>"> <?php echo $get_name['ten']; ?> </a> 
@@ -38,5 +78,114 @@
 	<span class="description" style="font-size: 18px;">
 			<?php echo $tv_2['noi_dung']; ?>
 	</span>
+	<div class="review col-sm-12">
+		<span class="header" style="font-size: 23px;background: none">ĐÁNH GIÁ SẢN PHẨM</span>
+		<div class="rating_overview" style="margin-bottom: 20px">
+			<div class="ratings">
 
+				 <!-- get review data  -->
+
+				<?php 
+				$get_review_query = "select * from review where sp_id = '$id'";
+				// $result = pg_query($conn, $query);
+				$get_average_star = "select AVG(star) from review where sp_id = '$id'";
+				$avg = pg_query($conn,$get_average_star);
+				$row = pg_fetch_array($avg);
+				$average_star = round($row['avg'],1);
+				$average_star_integer = round($row['avg']);
+				$comments = pg_query($conn,$get_review_query);
+			
+			echo "<span style='font-size: 25px'>$average_star</span> trên 5";
+			echo "
+			</div>
+			<div class='stars'>
+			";
+				for($i=1;$i<=$average_star_integer;$i++) {
+
+					echo "<span class='fa fa-star checked' ></span>";
+				}
+				for($i=$average_star_integer;$i<5;$i++) {
+
+					echo "<span class='fa fa-star' ></span>";
+				}
+				echo "
+			</div>
+
+		</div>
+				";
+				?>
+
+
+				<?php  
+				while ($row = pg_fetch_array($comments)) {
+					$star_comment = $row['star'];
+					$user_comment = $row['username'];
+					$content_comment = $row['comment'];
+    				// echo "<span>$star_comment</span>";
+    				// echo "<span>$content_comment</span>";
+		echo "
+		<div class='review_comment'>
+			<div class='user_avatar'>
+				<img src='hinh_anh/avatar/2.jpg' class='avatar_img'>
+			</div>
+			<div class='main_rating'>
+				<div class='username'>
+					<span>$user_comment</span>
+				</div>
+				<div class='stars'>";
+				for($i=1;$i<=$star_comment;$i++) {
+
+					echo "<span class='fa fa-star checked' ></span>";
+				}
+				for($i=$star_comment;$i<5;$i++) {
+
+					echo "<span class='fa fa-star' ></span>";
+				}
+				echo "
+				</div>
+				<div class='comment'>$content_comment</div>
+			</div>
+
+		</div>
+		";
+		}
+				 ?>
+		
+		
+
+		<div style="width: 40%; padding-top: 10px; font-size: 24px;">
+			
+		<form action="" method = "post">
+		<?php
+		if(isset($_SESSION['login_user'])) {
+			echo "
+		<fieldset class='rate'>
+    <input id='rate1-star5' type='radio' name='rate1' value='5' />
+    <label for='rate1-star5' title='Excellent'>5</label>
+
+    <input id='rate1-star4' type='radio' name='rate1' value='4' />
+    <label for='rate1-star4' title='Good'>4</label>
+
+    <input id='rate1-star3' type='radio' name='rate1' value='3' />
+    <label for='rate1-star3' title='Satisfactory'>3</label>
+
+    <input id='rate1-star2' type='radio' name='rate1' value='2' />
+    <label for='rate1-star2' title='Bad'>2</label>
+
+    <input id='rate1-star1' type='radio' name='rate1' value='1' />
+    <label for='rate1-star1' title='Very bad'>1</label>
+  </fieldset>
+			";
+}
+?>
+	    <input type="text" class="form-control" name="content" >
+	  	<input type="submit" class="btn btn-primary" style="margin-top: 10px" value="Bình luận">
+	  	</div>
+	  	
+	  	<!-- <button type="button" class="btn btn-primary" onclick="window.location.href='?thamso=register'">Đăng ký</button> -->
+	</form>
+</div>
+	</div>
+
+ 
 </div>

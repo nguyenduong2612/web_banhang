@@ -28,13 +28,15 @@
 		<div class="header">
 			<?php 
 			if(!isset($_SESSION['login_user'])){
-				echo "<a class='btn btn-danger login_button' href='?thamso=login'>Đăng nhập</a>";
+				echo "<a class='btn btn-danger' href='?thamso=login' role='button' style='margin-bottom: 3px;position: absolute;right: 122px ;top: 30px'>Đăng nhập</a>";
+				echo "<a class='btn btn-success go-to-register' href='#register' role='button' style='margin-bottom: 3px;position: absolute;right: 26px ;top: 30px'>Đăng kí</a>";
+
 			} else if(isset($_SESSION['login_user'])) {
 				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span>".$_SESSION['login_user']."</span>";
 				echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
 			}
 			?>
-			<a href="#"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
+			<a href="./index.php"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>
 			<?php 
 				include("chuc_nang/tim_kiem/vung_tim_kiem.php");
 			?>

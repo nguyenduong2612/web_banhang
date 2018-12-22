@@ -150,13 +150,26 @@ INSERT INTO "thong_tin_quan_tri" ("id", "ky_danh", "mat_khau") VALUES
 
 -------------------------------------------------
 
-CREATE TABLE "khach_hang" (
+CREATE TABLE "khach_hang"
+(
+    "id" serial PRIMARY KEY,
+    "ten_khach_hang" varchar(256) NOT NULL,
+    "mat_khau" varchar(256)  NOT NULL,
+    "email" varchar(256)  NOT NULL,
+    "dia_chi" varchar(256)  NOT NULL,
+    "dien_thoai" varchar(256)  NOT NULL
+); 
+
+ALTER TABLE "khach_hang" ADD UNIQUE (ten_khach_hang);
+
+------------------------------------------- 
+
+CREATE TABLE "review" (
   "id" int primary key,
-  "username" varchar(256)  NOT NULL,
-  "pass" varchar(256) NOT NULL
+  "username"  varchar(256) NOT NULL,
+  "sp_id" int NOT NULL,
+  "star" int NOT NULL,
+  "comment" varchar(256) NOT NULL,
+  foreign key ("username") references "khach_hang" ("ten_khach_hang"),
+  foreign key ("sp_id") references "san_pham" ("id")
 );
-
-INSERT INTO "khach_hang" ("id", "username", "pass") VALUES
-('1', 'admin', 'admin');
-
-ALTER TABLE "khach_hang" ADD UNIQUE (username);

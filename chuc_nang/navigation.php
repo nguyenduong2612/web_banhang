@@ -3,13 +3,10 @@
 	switch($thamso)
 	{
 		case "login":
-			include("chuc_nang/login/login.php");
+			include("chuc_nang/login/login_form.php");
 		break;
 		case "logout":
 			include("chuc_nang/login/logout.php");
-		break;
-		case "register":
-			include("chuc_nang/login/register.php");
 		break;
 		case "caterogy":
 			include("chuc_nang/san_pham/caterogy.php");
@@ -39,6 +36,7 @@
 			include("chuc_nang/slideshow/slideshow.php");	
 			include("chuc_nang/san_pham/main_product.php");	
 			include("chuc_nang/san_pham/new_product.php"); 
-			include("chuc_nang/san_pham/hot_product.php"); 
+			include("chuc_nang/san_pham/hot_product.php");
+			include("chuc_nang/register/register_form.php");  
 	}
 ?>
