@@ -150,8 +150,7 @@ CREATE TABLE "khach_hang"
     "mat_khau" varchar(256)  NOT NULL,
     "email" varchar(256)  NOT NULL,
     "dia_chi" varchar(256)  NOT NULL,
-    "dien_thoai" varchar(256)  NOT NULL,
-    CONSTRAINT khach_hang_pkey PRIMARY KEY (id)
+    "dien_thoai" varchar(256)  NOT NULL
 ); 
 
 INSERT INTO "khach_hang" ("id", "ten_khach_hang", "mat_khau", "email", "dia_chi", "dien_thoai") VALUES
