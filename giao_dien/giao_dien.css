@@ -46,17 +46,11 @@ a
 	font-size: 20px;
 	display: inline-block;
     position: absolute;
-    top: 25px;
-    right: 155px;
+    top: 31px;
+    right: 96px;
     text-align: right;
     width: 400px;
-}
-.user_name a {
-	color: #ffc107;
-}
-.user_name a:hover {
-	text-decoration: none;
-	color: #d39e00;
+    color: #ffc107;
 }
 .header {
 	width: 100%;
@@ -425,7 +419,7 @@ input:checked ~ label:hover ~ label {
 .login_box {display: inline-block;
     position: absolute;
     /* top: 23px; */
-    right: -4px;
+    right: -9px;
     padding: 10px;
     font-size: 16px;
     background-color: #ffc107;
@@ -435,27 +429,27 @@ input:checked ~ label:hover ~ label {
 	border: 1px solid #ccc;
     border-radius: 4px;
     display: none;
-    width: 163px;
+    width: 175px;
     position: absolute;
-    right: 20px;
+    right: -5px;
     top: 54px;
     background-color: #fff;
     z-index: 11;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 6px;
 }
 .circle:hover .user_wrapper{
 	display: block!important;
 }
 .circle{
-   height: 59px;
+   height: 60px;
     display: inline-block;
-    width: 46px;
+    width: 50px;
     /*background-color: red;*/
     position: absolute;
     top: 23px;
     top: 23px;
     right: 40px;
+    z-index: 999;
 }
 .login_user_part{
     padding: 8px;

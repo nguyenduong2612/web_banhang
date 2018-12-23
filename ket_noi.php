@@ -1,5 +1,5 @@
 <?php
-	$conn =pg_connect("host=localhost dbname=db_banhang user=postgres password=nguyenducanh");
+	$conn =pg_connect("host=localhost dbname=db_banhang user=postgres password=123456");
 ?> 
 <!-- 
 <?php

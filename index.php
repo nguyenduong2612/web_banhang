@@ -35,9 +35,9 @@
 					echo "<a class='btn btn-success go-to-register' href='index.php#register' role='button' style='margin-bottom: 3px;position: absolute;right: 26px ;top: 30px'>Đăng kí</a>";
 				}
 			} else if(isset($_SESSION['login_user'])) {
+				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span>".$_SESSION['login_user']."</span>";
 				echo "<div class= 'circle'><div class ='login_box'><i class='fas fa-user-tie'></i>
-					<div class='user_wrapper'>
-						<div>".$_SESSION['login_user']."</div>";
+					<div class='user_wrapper'>";
 					echo "	
 					<div class='login_user_part'><a href='?thamso=myuser'>Tài khoản của tôi</a></div>
 					<div class='login_user_part'><a href='?thamso=logout'>Đăng xuất</a></div>

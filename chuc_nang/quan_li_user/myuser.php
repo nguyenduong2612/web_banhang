@@ -1,5 +1,5 @@
 <?php 
-	$conn =pg_connect("host=localhost dbname=db_banhang user=postgres password=nguyenducanh");
+	include('ket_noi.php');
 	$user_name = $_SESSION['login_user'];
 	$result=pg_query($conn,"SELECT * FROM khach_hang WHERE ten_khach_hang = '$user_name'");
 	if (!$result) {

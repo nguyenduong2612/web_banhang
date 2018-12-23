@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <h2>CẬP NHẬT THÔNG TIN KHÁCH HÀNG</h2>
                 <?php echo "<h2 style= 'font-size: 24px;
-    margin: 0 0';>Ten khach hang :   ".$_SESSION['login_user']."</h2>"; ?>
+    margin: 0 0';>Tên khách hàng :   ".$_SESSION['login_user']."</h2>"; ?>
             </div>
             <div class="row">
                 <form method="post" action="" class="contact-form" method="POST">
