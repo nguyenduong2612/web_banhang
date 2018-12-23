@@ -8,6 +8,12 @@
 		case "logout":
 			include("chuc_nang/login/logout.php");
 		break;
+<<<<<<< HEAD
+=======
+		case "profile":
+			include("chuc_nang/profile/profile.php");
+		break;
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2
 		case "caterogy":
 			include("chuc_nang/san_pham/caterogy.php");
 		break;
@@ -38,6 +44,10 @@
 			include("chuc_nang/san_pham/main_product.php");	
 			include("chuc_nang/san_pham/new_product.php"); 
 			include("chuc_nang/san_pham/hot_product.php");
+<<<<<<< HEAD
 			include("chuc_nang/register/register_form.php"); 
+=======
+			include("chuc_nang/register/register_form.php");  
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2
 	}
 ?>

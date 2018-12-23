@@ -5,8 +5,13 @@ section {
     max-width: 1140px;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 h2 {
 	    display: block;
+=======
+#register h2 {
+    display: block;
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2
     width: 1140px;
     height: 76px;
     font-size: 265%;
@@ -18,9 +23,22 @@ h2 {
     text-transform: uppercase;
 }
 .contact-form {
+<<<<<<< HEAD
     width: 60%;
     margin: 0 auto;
 }
+=======
+    width: 35%;
+    margin: 0 auto;
+}
+#register .form-group {
+    margin-bottom: 20px;
+}
+#register .form-control {
+    padding: 10px;
+    height: 40px;
+}
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2
 
 input[type=text],
 input[type=email],
@@ -41,4 +59,8 @@ input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
+<<<<<<< HEAD
 *:focus {outline: none;}
+=======
+*:focus {outline: none;} 
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2

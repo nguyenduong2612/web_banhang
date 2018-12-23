@@ -1,8 +1,15 @@
 <head>
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="giao_dien/grid.css">
 		<link rel="stylesheet" type="text/css" href="giao_dien/animate.css">
 		<link rel="stylesheet" type="text/css" href="giao_dien/onions.min.css">
 		<link rel="stylesheet" type="text/css" href="giao_dien/normalize.css">
+=======
+<!-- 		<link rel="stylesheet" type="text/css" href="giao_dien/grid.css">
+		<link rel="stylesheet" type="text/css" href="giao_dien/animate.css">
+		<link rel="stylesheet" type="text/css" href="giao_dien/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="giao_dien/normalize.css"> -->
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2
 		<link rel="stylesheet" type="text/css" href="giao_dien/register_form.css">
 		<script src="hieu_ung/scroll_when_click_id.js"></script>
 				<!-- <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
@@ -15,6 +22,7 @@
             </div>
             <div class="row">
                 <form method="post" action="./chuc_nang/register/register_request.php" class="contact-form" method="POST">
+<<<<<<< HEAD
                     <div class="row">
                         <div class="col span-1-of-3">
                             <label for="name">Tên đăng nhập</label>
@@ -81,3 +89,47 @@
                 
             </div>
         </section>
+=======
+                    <div class="form-group">
+                        <label>Tên đăng nhập</label>
+                        <input type="text" name="name" id="name" placeholder="Tên đăng nhập" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Mật khẩu</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu">
+                    </div>
+                     <div class="form-group">
+                        <label for="name">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" name="address" id="address" placeholder="Địa chỉ" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Số điện thoại</label>
+                        <input type="text" name="telephone" id="telephone" placeholder="Số điện thoại" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="find-us">How did you find us?</label>
+                        <select name="find-us" id="find-us">
+                            <option value="friends" selected>Friends</option>
+                            <option value="search">Search engine</option>
+                            <option value="ad">Advertisement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="text-align: center;">
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn btn-warning">Đăng kí </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+>>>>>>> 8c491c954c299906a341f3371b733e0af863acb2

@@ -58,13 +58,13 @@ INSERT INTO "quang_cao" ("id", "html", "vi_tri") VALUES
 CREATE TABLE "san_pham" (
   "id" serial primary key,
   "ten" varchar(256)  NOT NULL,
-  "gia" int(255) NOT NULL,
+  "gia" int NOT NULL,
   "hinh_anh" varchar(256)  NOT NULL,
   "noi_dung" text  NOT NULL,
-  "thuoc_menu" int(255) NOT NULL,
+  "thuoc_menu" int NOT NULL,
   "noi_bat" varchar(256)  NOT NULL,
   "trang_chu" varchar(256) NOT NULL,
-  "sap_xep_trang_chu" int(255) NOT NULL
+  "sap_xep_trang_chu" int NOT NULL
 );
 
 ---------------------
@@ -140,3 +140,29 @@ CREATE TABLE "thong_tin_quan_tri" (
 
 INSERT INTO "thong_tin_quan_tri" ("id", "ky_danh", "mat_khau") VALUES
 (1, 'admin', 'c3284d0f94606de1fd2af172aba15bf3');
+
+-------------------------------------------------
+
+CREATE TABLE "khach_hang"
+(
+    "id" serial PRIMARY KEY,
+    "ten_khach_hang" varchar(256) NOT NULL,
+    "mat_khau" varchar(256)  NOT NULL,
+    "email" varchar(256)  NOT NULL,
+    "dia_chi" varchar(256)  NOT NULL,
+    "dien_thoai" varchar(256)  NOT NULL
+); 
+
+ALTER TABLE "khach_hang" ADD UNIQUE (ten_khach_hang);
+
+------------------------------------------- 
+
+CREATE TABLE "review" (
+  "id" int primary key,
+  "username"  varchar(256) NOT NULL,
+  "sp_id" int NOT NULL,
+  "star" int NOT NULL,
+  "comment" varchar(256) NOT NULL,
+  foreign key ("username") references "khach_hang" ("ten_khach_hang"),
+  foreign key ("sp_id") references "san_pham" ("id")
+);
