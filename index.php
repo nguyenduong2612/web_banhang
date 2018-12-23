@@ -34,10 +34,18 @@
 				} else {
 					echo "<a class='btn btn-success go-to-register' href='index.php#register' role='button' style='margin-bottom: 3px;position: absolute;right: 26px ;top: 30px'>Đăng kí</a>";
 				}
-
 			} else if(isset($_SESSION['login_user'])) {
-				echo "<span class='user_name'><span style='color: #fff;'>Xin chào </span><a href='?thamso=profile'>".$_SESSION['login_user']."</a></span>";
-				echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
+				echo "<div class= 'circle'><div class ='login_box'><i class='fas fa-user-tie'></i>
+					<div class='user_wrapper'>
+						<div>".$_SESSION['login_user']."</div>";
+					echo "	
+					<div class='login_user_part'><a href='?thamso=myuser'>Tài khoản của tôi</a></div>
+					<div class='login_user_part'><a href='?thamso=logout'>Đăng xuất</a></div>
+						
+						
+					</div>
+				</div></div>";
+				//echo "<a class='btn btn-danger login_button' href='?thamso=logout'>Đăng xuất</a>";
 			}
 			?>
 			<a href="./index.php"><img src="hinh_anh/avatar/icon.png" class="web_icon"></a>

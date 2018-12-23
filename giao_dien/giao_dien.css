@@ -414,3 +414,63 @@ input:checked ~ label:hover ~ label {
   color: orange;
   transition: 0.2s;
 }
+.login_box i{
+	color: #464646;
+    font-size: 23px;
+    /*margin-right: 10px;*/
+    /*border-right: 2px solid #464646;*/
+    /*padding-right: 12px;*/
+    padding: 3px;
+}
+.login_box {display: inline-block;
+    position: absolute;
+    /* top: 23px; */
+    right: -4px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffc107;
+    border-radius: 40px;
+}
+.user_wrapper{
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+    width: 163px;
+    position: absolute;
+    right: 20px;
+    top: 54px;
+    background-color: #fff;
+    z-index: 11;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.circle:hover .user_wrapper{
+	display: block!important;
+}
+.circle{
+   height: 59px;
+    display: inline-block;
+    width: 46px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 23px;
+    top: 23px;
+    right: 40px;
+}
+.login_user_part{
+    padding: 8px;
+    /*background-color: #ffc107;*/
+    margin: 5px;
+    /* color: #fff; */
+    border-radius: 7px;
+}
+.login_user_part a{
+	color:#000 ;
+}
+.login_user_part a:hover{
+	color: #000 !important;
+	text-decoration: none;
+}
+.login_user_part:hover {
+	background-color: #ffc107;
+}
