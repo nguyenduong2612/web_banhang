@@ -15,7 +15,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     //// lấy các nội dung mới
 
-    $username   = addslashes($_POST['name']);
     $password   = addslashes($_POST['password']);
     $repassword   = addslashes($_POST['repassword']);
     $email      = addslashes($_POST['email']);
@@ -36,7 +35,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "<script type='text/javascript'>alert('Vui lòng nhập lại đúng mật khẩu.'); window.history.back();</script>";
         exit;
     }
-    echo $presentname;
     $updatemember = pg_query($conn,"
         UPDATE khach_hang
         SET 
@@ -49,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($updatemember)
         echo "<script type='text/javascript'>alert('Bạn đã cập nhật thành công thông tin. Bạn hãy đăng nhập lại để tận hưởng các dịch vụ của chúng tôi'); window.location.href='?thamso=logout';</script>";
     else
-        echo "<script type='text/javascript'>alert('Có lỗi trong quá trình đăng ký.');";
+         echo "<script type='text/javascript'>alert('Có lỗi trong quá trình đăng ký.'); window.history.back();</script>";
 }
 
  ?>

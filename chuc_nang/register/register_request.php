@@ -56,5 +56,5 @@ if (!isset($_POST['name'])) {
     if ($addmember)
         echo "<script type='text/javascript'>alert('Cảm ơn bạn đã đăng ký thành viên. Hãy tận hưởng niềm vui mua sắm với Food Lover !'); window.location.href='../../index.php?thamso=login';</script>";
     else
-        echo "<script type='text/javascript'>alert('Có lỗi trong quá trình đăng ký.'); window.history.back();</script>"
+        echo "<script type='text/javascript'>alert('Có lỗi trong quá trình đăng ký.'); window.history.back();</script>";
  ?>

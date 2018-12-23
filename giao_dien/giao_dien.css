@@ -457,6 +457,7 @@ input:checked ~ label:hover ~ label {
     margin: 5px;
     /* color: #fff; */
     border-radius: 7px;
+    transition: 0.3s;
 }
 .login_user_part a{
 	color:#000 ;
