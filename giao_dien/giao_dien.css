@@ -17,10 +17,9 @@ a
 	color: #000;
 	height: 500px;
 	overflow: hidden;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.5)), url(../hinh_anh/slideshow/a_1.png);
-	background-size: cover;
-    background-position: center;
-    z-index: 0;
+}
+.cycle-bg-image {
+	background-position: center;
 }
 .slideshow h1 {
 	text-align: center;
