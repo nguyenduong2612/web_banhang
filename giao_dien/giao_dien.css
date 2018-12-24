@@ -255,6 +255,12 @@ a
 	padding: 40px;
 	font-size: 40px;
 }
+.guidetitle {
+	color: #ffc107;
+	font-size: 30px;
+	display: block;
+	padding: 20px;
+}
 .product_name {
 	display: block;
 	padding: 25px;
