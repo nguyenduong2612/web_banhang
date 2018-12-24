@@ -477,3 +477,7 @@ input:checked ~ label:hover ~ label {
 .login_user_part:hover {
 	background-color: #ffc107;
 }
+
+.active {
+	color: #dc3545 !important;
+}
