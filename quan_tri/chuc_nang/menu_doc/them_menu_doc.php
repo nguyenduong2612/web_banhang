@@ -18,7 +18,7 @@
 				<td>&nbsp;</td>
 				<td>
 					<br>
-					<input type="submit" name="bieu_mau_them_menu_doc" value="Thêm menu" style="width:200px;height:50px;font-size:24px" >
+					<input type="submit" name="bieu_mau_them_menu_doc" value="Thêm danh mục" style="width:200px;height:50px;font-size:24px" >
 				</td>
 			</tr>
 		</table>

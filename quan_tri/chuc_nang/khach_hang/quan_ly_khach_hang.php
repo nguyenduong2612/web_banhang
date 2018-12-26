@@ -14,6 +14,7 @@
 	$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
 	$tv="select * from khach_hang order by id desc limit $so_dong_tren_mot_trang offset $vtbd";
 	$tv_1=pg_query($conn,$tv);
+
 ?>
 <div style="width:100%;text-align:left; padding: 35px 5%;">
 	<b style="color:blue;font-size:20px" >Quản lý khách hàng</b><br><br>
@@ -21,8 +22,9 @@
 		<tr style="background:#CCFFFF;height:40px;" >
 			<td width="200px" ><b>Tên</b></td>
 			<td width="320px" ><b>Email</b></td>
-			<td width="380px" ><b>Địa chỉ</b></td>
+			<td width="250px" ><b>Địa chỉ</b></td>
 			<td width="120px" ><b>Điện thoại</b></td>
+			<td width="100px" align="center"><b>Xóa</b></td>
 		</tr>
 		<?php 
 			while($tv_2=pg_fetch_array($tv_1))
@@ -32,6 +34,7 @@
 				$email=$tv_2['email'];
 				$dia_chi=$tv_2['dia_chi'];
 				$dien_thoai=$tv_2['dien_thoai'];
+				$link_xoa="?xoa_khach_hang=co&id=".$id;
 				?>
 					<tr class="a_1" >
 						<td>
@@ -45,6 +48,9 @@
 						</td>
 						<td>
 							<?php echo $dien_thoai; ?>
+						</td>
+						<td align="center" >
+							<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
 						</td>
 					</tr>
 				<?php 
