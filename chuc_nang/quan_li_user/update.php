@@ -14,13 +14,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // echo $arr["ten_khach_hang"];
     }
     //// lấy các nội dung mới
-
     $password   = addslashes($_POST['password']);
     $repassword   = addslashes($_POST['repassword']);
     $email      = addslashes($_POST['email']);
     $address   = addslashes($_POST['address']);
     $telephone   = addslashes($_POST['telephone']);
     $ten_file_anh=$_FILES['hinh_anh']['name'];
+    if ($ten_file_anh == "") {
+        $get_name = pg_fetch_array(pg_query($conn,"select * from khach_hang where ten_khach_hang='$presentname'"));
+        $ten_file_anh = $get_name['anh_dai_dien'];
+    }
     //ma hóa mật khẩu
     $password = md5($password);
     //gán id cho new user
@@ -49,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($updatemember) {
         $duong_dan_anh="hinh_anh/avatar_user/".$ten_file_anh;
         move_uploaded_file($_FILES['hinh_anh']['tmp_name'],$duong_dan_anh);
-        echo "<script type='text/javascript'>alert('Bạn đã cập nhật thành công thông tin. Bạn hãy đăng nhập lại để tận hưởng các dịch vụ của chúng tôi'); </script>";
+        echo "<script type='text/javascript'>alert('Bạn đã cập nhật thành công thông tin. Bạn hãy đăng nhập lại để tận hưởng các dịch vụ của chúng tôi'); window.location='?thamso=logout';</script>";
     }
 
     else

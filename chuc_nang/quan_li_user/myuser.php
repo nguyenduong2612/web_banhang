@@ -10,7 +10,7 @@
 		$arr=pg_fetch_array($result);
 		// echo $arr["ten_khach_hang"];
 	}
-	$get_avatar = $get_avatar = pg_fetch_array(pg_query($conn,"select * from khach_hang where ten_khach_hang='$user_name'"));
+	$get_avatar = pg_fetch_array(pg_query($conn,"select * from khach_hang where ten_khach_hang='$user_name'"));
  ?>
 
 
