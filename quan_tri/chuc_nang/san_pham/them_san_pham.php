@@ -1,6 +1,9 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
 ?>
+<?php
+	include("../ket_noi.php");	
+?>
 <div style="width:100%;text-align:left; padding: 35px 5%;">
 	<form action="" method="post" enctype="multipart/form-data" >
 		<table width="990px" >

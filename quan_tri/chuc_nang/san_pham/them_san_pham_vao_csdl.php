@@ -2,7 +2,7 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
-	include("ket_noi.php");	
+	include("../ket_noi.php");	
 	$ten=trim($_POST['ten']);
 	$ten=str_replace("'","&#39;",$ten);
 	$danh_muc=$_POST['danh_muc'];
@@ -24,6 +24,20 @@
 			$tv_k="select count(*) from san_pham where hinh_anh='$ten_file_anh' ";
 			$tv_k_1=pg_query($conn,$tv_k);
 			$tv_k_2=pg_fetch_array($tv_k_1);
+
+			$tv_count = pg_query($conn, "select * from san_pham");
+	    	$count = pg_num_rows($tv_count);
+	    	$check = 1;
+	    	for ($i=1;$i<=$count;$i++) {
+	    		if (pg_affected_rows(pg_query($conn,"SELECT id FROM san_pham WHERE id='$i'")) > 0) {
+	    			continue;
+	    		} else {
+	    			$id = $i;
+	    			$check = 0;
+	    			break;
+	    		}
+	    	}
+	 		if ($check == 1) $id = $count + 1;
 			if($tv_k_2[0]==0)
 			{
 				$tv="
@@ -39,7 +53,7 @@
 				sap_xep_trang_chu
 				)
 				VALUES (
-				NULL ,
+				'$id',
 				'$ten',
 				'$gia',
 				'$ten_file_anh',
@@ -60,16 +74,16 @@
 			}
 			else 
 			{
-				thong_bao_html("Hình ảnh bị trùng tên");
+				echo "<script type='text/javascript'>alert('Hình ảnh bị trùng tên'); window.history.back();</script>";
 			}
 		}
 		else 
 		{
-			thong_bao_html("Chưa chọn ảnh");
+			echo "<script type='text/javascript'>alert('Chưa chọn ảnh cho sản phẩm'); window.history.back();</script>";
 		}
 	}
 	else 
 	{
-		thong_bao_html("Tên sản phẩm chưa được điền vào");
+		echo "<script type='text/javascript'>alert('Chưa điền tên sản phẩm'); window.history.back();</script>";
 	}
 ?>
