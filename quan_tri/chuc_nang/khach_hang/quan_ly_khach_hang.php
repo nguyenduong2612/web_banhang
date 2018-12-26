@@ -57,7 +57,7 @@
 					for($i=1;$i<=$so_trang;$i++)
 					{
 						$link_phan_trang="?thamso=hoa_don&trang=".$i;
-						echo "<a href='$link_phan_trang' class='phan_trang' >";
+						echo "<a href='$link_phan_trang' class='phan_trang' id='page".$i."'>";
 							echo $i;
 						echo "</a> ";
 					}

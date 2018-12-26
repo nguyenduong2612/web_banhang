@@ -120,7 +120,7 @@
 					for($i=1;$i<=$so_trang;$i++)
 					{
 						$link_phan_trang="?thamso=quan_ly_san_pham&id_menu=".$id_menu."&trang=".$i;
-						echo "<a href='$link_phan_trang' class='phan_trang' >";
+						echo "<a href='$link_phan_trang' class='phan_trang' id='page".$i."'>";
 							echo $i;
 						echo "</a> ";
 					}
