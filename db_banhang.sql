@@ -54,7 +54,7 @@ ALTER TABLE "san_pham" ADD FOREIGN KEY (thuoc_menu) REFERENCES menu_doc(id);
 ---------------------
 
 INSERT INTO "san_pham" ("id", "ten", "gia", "hinh_anh", "noi_dung", "thuoc_menu", "noi_bat", "trang_chu", "sap_xep_trang_chu") VALUES
-(1, 'Lẩu thập cẩm', 55000, '1.jpg', 'Nội dung của sản phẩm 1', 4, 'co', '', 0),
+(1, 'Lẩu thập cẩm', 55000, '1.jpg', 'Nội dung của sản phẩm', 4, 'co', '', 0),
 (2, 'Gân bò dầm cóc', 82000, '3.jpg', 'Nội dung của sản phẩm 3', 3, '', 'co', 7),
 (3, 'Gà rán sốt', 86000, '1_2.jpg', 'Nội dung của sản phẩm 1_2', 1, '', '', 0),
 (4, 'Hamburger gà', 97000, '1_3.jpg', 'Nội dung của sản phẩm 1_3', 2, 'co', 'co', 3),
