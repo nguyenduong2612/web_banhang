@@ -15,7 +15,7 @@
 				<td colspan="2" ><b style="color:blue;font-size:20px" >Sửa thông tin quản trị</b><br><br> </td>			
 			</tr>
 			<tr>
-				<td width="100px" >Ký danh : </td>
+				<td width="200px" valign="top" >Ký danh : </td>
 				<td width="890px" >
 					<input style="width:400px;margin-top:3px;margin-bottom:3px;" name="ky_danh" value="<?php echo $ky_danh; ?>" >
 				</td>
@@ -23,10 +23,13 @@
 			<tr>
 				<td valign="top" >Mật khẩu : </td>
 				<td >
-					<input type="password" style="width:400px;margin-top:3px;margin-bottom:3px;" name="mat_khau" value="khong_doi" ><br><br>
-					- Nếu chỉ muốn đổi ký danh thì chỉ cần sửa ký danh , còn phần mật khẩu thì để nguyên (mật khẩu sẽ không đổi khi gửi biểu mẫu) <br><br>
-					- Khi sửa thông tin quản trị mà thông tin mật khẩu nhập vào là 'khong_doi' thì thông tin mật khẩu vẫn giữ nguyên (nghĩa là mật khẩu cũ không đổi)
-					<br><br>
+					<input type="password" style="width:400px;margin-top:3px;margin-bottom:3px;" name="mat_khau">
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" >Nhập lại mật khẩu : </td>
+				<td >
+					<input type="password" style="width:400px;margin-top:3px;margin-bottom:3px;" name="check_mat_khau"><br><br>
 				</td>
 			</tr>
 			
