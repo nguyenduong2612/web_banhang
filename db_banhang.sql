@@ -38,23 +38,6 @@ INSERT INTO "menu_doc" ("id", "ten") VALUES
 
 -- --------------------------------------------------------
 
-
-CREATE TABLE "quang_cao" (
-  "id" serial primary key,
-  "html" text NOT NULL,
-  "vi_tri" varchar(256) NOT NULL
-);
-
----------------------------------
-
-INSERT INTO "quang_cao" ("id", "html", "vi_tri") VALUES
-(1, '<p style=\"text-align: center;\"><a href=\"#\"><img src=\"/ban_hang/hinh_anh/tinymce/300x250--CB500741502--QHNWY._V500767121__.jpg\" alt=\"\" width=\"149\" height=\"124\" /></a></p>\r\n<p style=\"text-align: center;\"><a href=\"#\"><img src=\"/ban_hang/hinh_anh/tinymce/1133965-amazon-student-ad-300x250-RY8Gm._V486506299__1.jpg\" alt=\"\" width=\"152\" height=\"127\" /></a></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><a href=\"#\">&nbsp;</a></p>', 'trai'),
-(2, '<p style=\"text-align: center;\"><img src=\"/ban_hang/hinh_anh/tinymce/51PxlzuytWL.jpg\" alt=\"\" width=\"200\" height=\"283\" /></p>', 'phai');
-
--- --------------------------------------------------------
-
-
-
 CREATE TABLE "san_pham" (
   "id" serial primary key,
   "ten" varchar(256)  NOT NULL,
@@ -119,23 +102,6 @@ INSERT INTO "san_pham" ("id", "ten", "gia", "hinh_anh", "noi_dung", "thuoc_menu"
 
 
 -- --------------------------------------------------------
-
-
-CREATE TABLE "slideshow" (
-  "id" serial primary key,
-  "hinh" varchar(256) NOT NULL,
-  "lien_ket" varchar(256) NOT NULL
-);
-
-----------------------------------------------
-INSERT INTO "slideshow" ("id", "hinh", "lien_ket") VALUES
-(1, 'a_1.png', '#'),
-(2, 'a_2.png', '#'),
-(3, 'a_3.png', '#'),
-(4, 'a_4.png', '#');
-
--- --------------------------------------------------------
-
 
 CREATE TABLE "thong_tin_quan_tri" (
   "id" serial primary key,
