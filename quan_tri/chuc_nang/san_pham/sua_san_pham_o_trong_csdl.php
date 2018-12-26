@@ -50,11 +50,11 @@
 		}
 		else 
 		{
-			thong_bao_html("Hình ảnh bị trùng tên");
+			echo "<script type='text/javascript'>alert('Hình ảnh bị trùng tên'); window.history.back();</script>";
 		}
 	}
 	else 
 	{
-		thong_bao_html("Tên sản phẩm chưa được điền vào");
+		echo "<script type='text/javascript'>alert('Chưa điền tên sản phẩm'); window.history.back();</script>";
 	}
 ?>

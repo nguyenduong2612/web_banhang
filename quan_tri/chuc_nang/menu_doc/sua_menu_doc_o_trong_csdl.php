@@ -17,6 +17,6 @@
 	}
 	else 
 	{
-		thong_bao_html("Tên menu chưa được điền vào");
+		echo "<script type='text/javascript'>alert('Chưa điền tên menu'); window.history.back();</script>";
 	}
 ?>

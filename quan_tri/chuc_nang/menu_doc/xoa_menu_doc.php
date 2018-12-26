@@ -14,6 +14,6 @@
 	}
 	else 
 	{
-		thong_bao_html("Menu này vẫn còn dữ liệu nên không thể xóa");
+		echo "<script type='text/javascript'>alert('Menu vẫn còn dữ liệu. Không thể xóa'); window.history.back();</script>";
 	}
 ?>
