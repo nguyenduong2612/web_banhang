@@ -118,6 +118,7 @@ INSERT INTO "thong_tin_quan_tri" ("id", "ky_danh", "mat_khau") VALUES
 CREATE TABLE "khach_hang"
 (
     "id" serial PRIMARY KEY,
+    "anh_dai_dien" varchar(256) NOT NULL,
     "ten_khach_hang" varchar(256) NOT NULL,
     "mat_khau" varchar(256)  NOT NULL,
     "email" varchar(256)  NOT NULL,

@@ -10,6 +10,7 @@ if (!isset($_POST['name'])) {
     $email      = addslashes($_POST['email']);
     $address   = addslashes($_POST['address']);
     $telephone   = addslashes($_POST['telephone']);
+    $link_anh_default = "default.png";
     //ma hóa mật khẩu
     $password = md5($password);
     //gán id cho new user
@@ -46,6 +47,7 @@ if (!isset($_POST['name'])) {
     $addmember = pg_query($conn,"
         INSERT INTO khach_hang(
             id,
+            anh_dai_dien,
             ten_khach_hang,
             mat_khau,
             email,
@@ -54,6 +56,7 @@ if (!isset($_POST['name'])) {
         )
         VALUES(
             '{$id}',
+            '{$link_anh_default}',
             '{$username}',
             '{$password}',
             '{$email}',

@@ -112,15 +112,18 @@
 
 				<?php  
 				while ($row = pg_fetch_array($comments)) {
+					$name = $row['username'];
+					$get_avatar = pg_fetch_array(pg_query($conn,"select * from khach_hang where ten_khach_hang='$name'"));
 					$star_comment = $row['star'];
 					$user_comment = $row['username'];
 					$content_comment = $row['comment'];
+					$avatar_user = $get_avatar['anh_dai_dien'];
     				// echo "<span>$star_comment</span>";
     				// echo "<span>$content_comment</span>";
 		echo "
 		<div class='review_comment'>
 			<div class='user_avatar'>
-				<img src='hinh_anh/avatar/2.jpg' class='avatar_img'>
+				<img src='hinh_anh/avatar_user/".$avatar_user."' class='avatar_img'>
 			</div>
 			<div class='main_rating'>
 				<div class='username'>
