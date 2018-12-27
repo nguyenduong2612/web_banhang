@@ -49,6 +49,8 @@ CREATE TABLE "san_pham" (
   "sap_xep_trang_chu" int NOT NULL
 );
 
+ALTER TABLE "san_pham" ADD FOREIGN KEY (thuoc_menu) REFERENCES menu_doc(id);
+
 ---------------------
 
 INSERT INTO "san_pham" ("id", "ten", "gia", "hinh_anh", "noi_dung", "thuoc_menu", "noi_bat", "trang_chu", "sap_xep_trang_chu") VALUES
