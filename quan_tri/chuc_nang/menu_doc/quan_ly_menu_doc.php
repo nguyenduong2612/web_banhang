@@ -16,7 +16,7 @@
 ?>
 <div style="width:100%;text-align:left; padding: 35px 5%;">
 	<b style="color:blue;font-size:20px" >Quản lý danh mục</b><br><br>
-	<table width="990px" class="tb_a1" >
+	<table width="100%" class="tb_a1" >
 		<tr style="background:#CCFFFF;height:40px;" >
 			<td width="550px" ><b>Tên</b></td>
 			<td align="center" width="220px" ><b>Sửa</b></td>

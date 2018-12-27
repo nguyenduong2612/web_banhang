@@ -17,7 +17,7 @@
 ?>
 <div style="width:100%;text-align:left; padding: 35px 5%;">
 	<form action="" method="post" enctype="multipart/form-data" >
-		<table width="990px" >
+		<table width="100%" >
 			<tr>
 				<td width="180px" ><b style="color:blue;font-size:20px" >Sửa sản phẩm</b><br><br> </td>
 				<td width="810px" align="right" >

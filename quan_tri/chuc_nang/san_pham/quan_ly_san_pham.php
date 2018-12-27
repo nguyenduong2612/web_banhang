@@ -72,7 +72,7 @@
 		$tv_1=pg_query($conn,$tv);
 	?>
 
-	<table width="990px" class="tb_a1" >
+	<table width="100%" class="tb_a1" >
 		<tr style="background:#CCFFFF;height:40px;" >
 			<td width="120px" ><b>Hình ảnh</b></td>
 			<td width="450px" ><b>Tên</b></td>

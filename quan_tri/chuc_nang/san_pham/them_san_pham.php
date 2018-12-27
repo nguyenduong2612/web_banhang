@@ -6,7 +6,7 @@
 ?>
 <div style="width:100%;text-align:left; padding: 35px 5%;">
 	<form action="" method="post" enctype="multipart/form-data" >
-		<table width="990px" >
+		<table width="100%" >
 			<tr>
 				<td colspan="2" ><b style="color:blue;font-size:20px" >Thêm sản phẩm</b><br><br> </td>
 				
