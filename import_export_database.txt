@@ -1,0 +1,11 @@
+IMPORT
+	- cd vào thư mục cài Postgres -> 9.6/bin
+	- chạy lệnh trên cmd: pg_dump -U tên-username tên-database > tên-file.pgsql
+	- file được tạo ra ngay trong thư mục bin
+
+EXPORT 
+	- copy file pgsql vào bin
+	- cd vào bin
+	- chạy lệnh trên cmd: psql -U tên-username tên-database < tên-file.pgsql
+
+NHỚ DROP HẾT BẢNG CŨ TRƯỚC KHI EXPORT FILE MỚI VÀO
