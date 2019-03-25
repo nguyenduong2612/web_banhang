@@ -13,7 +13,7 @@ CREATE TABLE "hoa_don" (
 INSERT INTO "hoa_don" ("id", "ten_nguoi_mua", "email", "dia_chi", "dien_thoai", "noi_dung", "hang_duoc_mua") VALUES
 (1, 'duonggngngn', 'easdasdasd@fasdf', 'asdasda', '1231242341', 'masdfnuweyransdf', '26[|||]1[|||||]'),
 (2, 'duong hai nguyen', 'nguyenguyen123@gmail.com', 'hanoi, vietnam', '123456789000', 'aaaabbbbssssssssssssss', '38[|||]0[|||||]14[|||]1[|||||]'),
-(3, 'a', 'a', 'a', 'a', 'a', '39[|||]1[|||||]'),
+(3, 'a', 'a', 'a', 'a', 'a', '39[|||]1[|||||]');
 
 -- --------------------------------------------------------
 
