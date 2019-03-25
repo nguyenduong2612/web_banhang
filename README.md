@@ -32,4 +32,6 @@ pg_dump -U username dbname > dbexport.pgsql
 > Trường hợp không chạy được import, có thể import thủ công bằng cách copy file **db_banhang.sql** vào Query Tool trên pgAdmin
 
 ## Thông tin quản trị
+
 Tài khoản/Mật khẩu quản trị: admin/admin. Link localhost/web_banhang/quan_tri
+> Chú ý config lại dbname, user, password tại file **ket_noi.php** theo PostgreSQL
