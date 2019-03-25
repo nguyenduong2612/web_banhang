@@ -25,7 +25,7 @@ hoặc dùng Github Desktop, link project tại [đây](https://github.com/nguye
 1. Tải postgreSQL (recommend 9.6 hoặc 10, pgAdmin4) tại [đây](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
 Copy file **dbexport.pgsql** vào PostgreSQL/9.6/bin/
 
-2. Chạy trên cmd
+2. cd đến PostgreSQL/9.6/bin/, chạy trên cmd
 ```
 pg_dump -U username dbname > dbexport.pgsql
 ```
