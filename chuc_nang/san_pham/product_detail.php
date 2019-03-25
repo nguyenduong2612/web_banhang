@@ -40,7 +40,7 @@
 			}
 
 		} else {
-			echo "<p class='fail_noti'>Please login to review this product</p>";
+			echo "<script>alert('Vui lòng đăng nhập để nhận xét sản phẩm này')</script>";
 		}
 		
 	}
