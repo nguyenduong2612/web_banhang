@@ -1,13 +1,5 @@
 <?php
-	function pg_connection_string_from_database_url() {
-	  extract(parse_url($_ENV["DATABASE_URL"]));
-	  return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
-	}
-	$conn =pg_pconnect(pg_connection_string_from_database_url());
+
+	$conn =pg_connect("host=ec2-50-17-227-28.compute-1.amazonaws.com dbname=d9muvonefgn9rk user=sncorvhbjcylzi port=5432 password=82cb74dc7ad600a9dc9e2e7ba2eda75aa7f20a2a24300af123cb51c91f425b26");
 
 ?> 
-<!-- 
-<?php
- /*   $conn = mysqli_connect("localhost","root","","db_banhang");
-    mysqli_set_charset($conn,"utf8");*/
-?>  -->
