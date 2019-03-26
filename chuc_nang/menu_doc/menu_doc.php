@@ -1,8 +1,7 @@
 <?php 
 	include("ket_noi.php");	
 	$tv="select * from menu_doc order by id";
-	$tv_1=$conn->prepare($tv);
-	$tv_1->execute();
+	$tv_1=pg_query($conn, $tv);
 ?>	
 
 <div class='menu_doc'>
