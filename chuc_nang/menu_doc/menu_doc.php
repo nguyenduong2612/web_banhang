@@ -1,13 +1,14 @@
 <?php 
 	include("ket_noi.php");	
 	$tv="select * from menu_doc order by id";
-	$tv_1=pg_query($conn, $tv);
+	$tv_1=$conn->prepare($tv);
+	$tv_1->execute();
 ?>	
 
 <div class='menu_doc'>
 	<?php 
 		echo "<div>";
-		while($tv_2=pg_fetch_array($tv_1))
+		while($tv_2=$tv_1->fetch())
 		{
 			$link="?thamso=caterogy&menu=".$tv_2['id'];
 			echo "<a style='margin: 5px 0;' href='$link'>";
