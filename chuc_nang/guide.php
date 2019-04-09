@@ -7,7 +7,7 @@
 		<p style="font-size: 24px; padding-bottom: 20px">
 			<span>Chọn món ăn mà bạn thích</span>
 		</p>
-		<img src="hinh_anh/Step_1.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%; margin-bottom: 50px;">
+		<img src="hinh_anh/step_1.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%; margin-bottom: 50px;">
 	</div>
 
 	<div id="step 2">
@@ -17,7 +17,7 @@
 			<br><br>
 			<span>Bạn có thể đặt nhiều món ăn khác nữa!!</span>
 		</p>
-		<img src="hinh_anh/Step_2.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%;margin-bottom: 50px;">
+		<img src="hinh_anh/step_2.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%;margin-bottom: 50px;">
 	</div>
 
 	<div id="step 3">
@@ -27,6 +27,6 @@
 			<br><br>
 			<span>Ấn Mua hàng để hoàn thành việc mua hàng trên web</span>
 		</p>
-		<img src="hinh_anh/Step_3.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%;margin-bottom: 50px;">
+		<img src="hinh_anh/step_3.PNG" style="border: 2px solid #fff;border-radius: 15px; width: 85%;margin-bottom: 50px;">
 	</div>
 </div>
