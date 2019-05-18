@@ -27,7 +27,7 @@ Copy file **dbexport.pgsql** vào PostgreSQL/9.6/bin/
 
 2. cd đến PostgreSQL/9.6/bin/, chạy trên cmd
 ```
-pg_dump -U username dbname > dbexport.pgsql
+pg_dump -U username dbname < dbexport.pgsql
 ```
 > Trường hợp không chạy được import, có thể import thủ công bằng cách copy file **db_banhang.sql** vào Query Tool trên pgAdmin
 
